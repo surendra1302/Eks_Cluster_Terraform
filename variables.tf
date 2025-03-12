@@ -1,7 +1,7 @@
 variable "subnet_ids" {
-    default = ["subnet-0dfe62279f6f789ac", "subnet-0959748954e0a29ba", "subnet-0c2bc94d85d14c12f"]
+    default = ["subnet-00fef19adc8c051c0", "subnet-0a0e93d2651dc6f21"]
 }
 
 variable "name" {
-  default = "kedhar-node"
+  default = "My-node"
 }
