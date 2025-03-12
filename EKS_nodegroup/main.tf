@@ -1,4 +1,4 @@
-resource "aws_eks_node_group" "Kedhar-nodegroup" {
+resource "aws_eks_node_group" "My-nodegroup" {
     cluster_name = var.cluster_name
     node_group_name = var.node_groupname
     node_role_arn = data.aws_iam_role.pull_ami1.arn
