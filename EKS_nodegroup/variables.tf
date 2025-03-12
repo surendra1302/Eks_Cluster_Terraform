@@ -4,7 +4,7 @@ variable "cluster_name" {
 
 variable "node_groupname" {
     description = "Enter the groupname"
-    default = "Kedhar-node-group"
+    default = "My-node-group"
 }
 
 variable "subnet_ids" {
