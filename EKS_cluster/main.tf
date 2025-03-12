@@ -1,4 +1,4 @@
-resource "aws_eks_cluster" "Kedhar-cluster" {
+resource "aws_eks_cluster" "EKS-cluster" {
     name = var.cluster_name
     role_arn = data.aws_iam_role.pull_role.arn
 
@@ -9,11 +9,11 @@ resource "aws_eks_cluster" "Kedhar-cluster" {
     }
 
 output "cluster_name" {
-  value = aws_eks_cluster.Kedhar-cluster.name
+  value = aws_eks_cluster.EKS-cluster.name
 }
   
 data "aws_iam_role" "pull_role" {
-    name = "Kedhar_EKS_Cluster"
+    name = "EKS_Cluster_Role"
   }
 
 output "role_arn" {
