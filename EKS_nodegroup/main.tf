@@ -3,7 +3,7 @@ resource "aws_eks_node_group" "Kedhar-nodegroup" {
     node_group_name = var.node_groupname
     node_role_arn = data.aws_iam_role.pull_ami1.arn
     subnet_ids      = var.subnet_ids
-    disk_size = "20"
+    disk_size = "15"
     scaling_config {
       desired_size = var.desired_size
       max_size = var.maxvalue
@@ -12,11 +12,11 @@ resource "aws_eks_node_group" "Kedhar-nodegroup" {
     instance_types = [var.instance_type]
     ami_type       = "AL2_x86_64"
     
-    #depends_on = [ aws_eks_cluster.Kedhar_EKS_Cluster ]
+    
 }
 
 data "aws_iam_role" "pull_ami1" {
-  name = "Kedhar_EKS_Nodegroup"
+  name = "EKS_Nodegroup_Role"
 }
 
 output "role_arn1" {
